@@ -78,7 +78,7 @@ h1 em,h2 em{color:var(--clay)}
 @keyframes float{50%{transform:translateY(-10px)}}
 .stamp{position:absolute;right:-18px;top:30px;width:120px;height:120px;border-radius:50%;background:var(--honey);display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.3)}
 .stamp svg{position:absolute;inset:0;animation:spin 20s linear infinite}
-.stamp text{font-size:10.5px;font-weight:700;letter-spacing:2.6px;fill:var(--green)}
+.stamp text{font-size:9.6px;font-weight:700;letter-spacing:2.2px;fill:var(--green)}
 .stamp span{font-size:34px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .js .hero__copy>*{opacity:0;transform:translateY(22px);animation:up .9s var(--ease) forwards}
@@ -198,8 +198,8 @@ h1 em,h2 em{color:var(--clay)}
 /* Carrito */
 .overlay{position:fixed;inset:0;z-index:80;background:rgba(20,32,26,.45);opacity:0;pointer-events:none;transition:opacity .3s}
 .overlay.on{opacity:1;pointer-events:auto}
-.drawer{position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(440px,100%);background:var(--paper);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .45s var(--ease);box-shadow:-30px 0 60px -30px rgba(0,0,0,.4)}
-.drawer.on{transform:none}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(440px,100%);background:var(--paper);display:flex;flex-direction:column;transform:translateX(100%);visibility:hidden;transition:transform .45s var(--ease),visibility 0s .45s}
+.drawer.on{transform:none;visibility:visible;transition:transform .45s var(--ease);box-shadow:-30px 0 60px -30px rgba(0,0,0,.4)}
 .drawer__head{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border-bottom:1px solid var(--line)}
 .drawer__head h3{font-size:28px}
 .drawer__head .x{position:static}
@@ -277,7 +277,7 @@ h1 em,h2 em{color:var(--clay)}
   .hero__ctas .btn{flex:1 1 100%}
   .hero__card{left:10px;bottom:16px;width:230px}
   .stamp{right:6px;top:10px;width:96px;height:96px}
-  .stamp text{font-size:9px}
+  .stamp text{font-size:9.6px}
   .perks .wrap{grid-template-columns:1fr}
   .perks div{padding:14px 4px}
   .sec{padding:70px 0}
