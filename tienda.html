@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda — Yerba & Barro</title>
+<meta name="description" content="Mates de calabaza, cerámica y madera, yerbas, termos y materas. Filtrá por categoría y precio.">
+<meta property="og:title" content="Tienda — Yerba & Barro">
+<meta property="og:description" content="Mates de calabaza, cerámica y madera, yerbas, termos y materas. Filtrá por categoría y precio.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1765533088244-37cd08b9524d?w=1200&q=72&auto=format&fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css?v=2">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="announce" aria-label="Promociones">
+  <div class="announce__track">
+    <span>🚚 Envío gratis desde $60.000</span><span>💳 3 cuotas sin interés</span><span>🏦 10% off pagando por transferencia</span><span>🧉 Curado incluido en todos los mates</span>
+    <span>🚚 Envío gratis desde $60.000</span><span>💳 3 cuotas sin interés</span><span>🏦 10% off pagando por transferencia</span><span>🧉 Curado incluido en todos los mates</span>
+  </div>
+</div>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Yerba & Barro, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 15h18c0 9-3 17-9 17s-9-8-9-17Z" fill="#c4623a"/><path d="M10 15h20" stroke="#1f3a2e" stroke-width="2.4" stroke-linecap="round"/><path d="M24 15 30 4" stroke="#1f3a2e" stroke-width="2.4" stroke-linecap="round"/><path d="M14 18c2 1 10 1 12 0" stroke="#7a9a4a" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Yerba <i>&amp;</i> Barro</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html" class="on" aria-current="page">Tienda</a>
+      <a href="tienda.html?cat=mates">Mates</a>
+      <a href="tienda.html?cat=yerbas">Yerbas</a>
+      <a href="nosotros.html">Nosotros</a>
+    </nav>
+    <div class="head__right">
+      <button class="icon-btn" id="searchBtn" aria-label="Buscar productos" title="Buscar (tecla /)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-btn__n" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="ptop">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Ubicación"><a href="index.html">Inicio</a><span>/</span><span id="crumbCat">Tienda</span></nav>
+    <h1 id="ptitle">La <em>tienda</em></h1>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:10px">
+  <div class="wrap shop">
+    <aside class="side" id="side" aria-label="Filtros">
+      <div class="side__head"><h3>Filtros</h3><button class="x" id="sideX" aria-label="Cerrar filtros">✕</button></div>
+      <div><h4>Categorías</h4><div class="side__cats" id="sideCats"></div></div>
+      <div class="range"><h4>Precio</h4><input type="range" id="fMax" aria-label="Precio máximo"><output id="fMaxOut"></output></div>
+      <div><h4>Mostrar</h4>
+        <label class="switch">Solo ofertas <input type="checkbox" id="fOff"></label>
+        <label class="switch">Se pueden grabar <input type="checkbox" id="fGrab"></label>
+      </div>
+      <button class="side__clear" id="fClear">Limpiar filtros</button>
+      <button class="btn btn--green btn--full filter-btn" id="sideApply" style="justify-content:center">Ver resultados</button>
+    </aside>
+    <div>
+      <div class="bar">
+        <span class="bar__n"><b id="resN">0</b> productos</span>
+        <div class="tools">
+          <button class="filter-btn" id="filterBtn">⚙ Filtros</button>
+          <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar…" aria-label="Buscar productos"></label>
+          <select id="sort" aria-label="Ordenar"><option value="dest">Destacados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option><option value="rate">Mejor valorados</option></select>
+        </div>
+      </div>
+      <div class="grid grid--3" id="shopGrid"></div>
+      <p class="empty" id="empty" hidden>No encontramos productos con esos filtros. 🧉</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__cols">
+      <div><a href="index.html" class="logo"><span>Yerba <i>&amp;</i> Barro</span></a><p style="margin-top:12px">Mates, yerbas y materas hechos a mano en nuestro taller de Lanús.</p></div>
+      <div><h4>Tienda</h4><ul><li><a href="tienda.html?cat=mates">Mates</a></li><li><a href="tienda.html?cat=yerbas">Yerbas</a></li><li><a href="tienda.html?cat=termos">Termos</a></li><li><a href="tienda.html?cat=materas">Materas</a></li></ul></div>
+      <div><h4>Ayuda</h4><ul><li><a href="nosotros.html#preguntas">Envíos y cambios</a></li><li><a href="nosotros.html#preguntas">Cómo curar tu mate</a></li><li><a href="checkout.html">Finalizar compra</a></li></ul></div>
+      <div><h4>Taller</h4><ul><li>Lanús, Buenos Aires</li><li>Lun a sáb · 10 a 19 h</li><li><a href="nosotros.html">Nosotros</a></li></ul></div>
+    </div>
+    <p class="demo">© <span data-year></span> · Tienda de demostración: los productos, precios y opiniones son ficticios y el pedido se envía por WhatsApp a modo de ejemplo. Fotos: Unsplash. Diseño y desarrollo: <a href="https://bether-studio.com/" target="_blank" rel="noopener">Bether Studio</a>.</p>
+  </div>
+</footer>
+
+<div class="sbox" id="sbox" aria-hidden="true" role="dialog" aria-label="Buscar productos">
+  <div class="sbox__panel">
+    <div class="sbox__in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="sIn" type="search" placeholder="¿Qué estás buscando?" autocomplete="off" aria-label="Buscar"><kbd>Esc</kbd></div>
+    <div class="sbox__res" id="sRes"></div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
+  <div class="drawer__head"><h3>Tu carrito</h3><button class="x" id="drawerX" aria-label="Cerrar carrito">✕</button></div>
+  <div class="ship" id="ship"></div>
+  <div class="drawer__body" id="drawerBody"></div>
+  <div class="drawer__foot" id="drawerFoot"></div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/datos.js?v=2"></script>
+<script src="js/tienda.js?v=2"></script>
+</body>
+</html>

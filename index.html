@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yerba &amp; Barro — Mates, yerbas y materas hechos a mano</title>
+<title>Yerba & Barro — Mates, yerbas y materas hechos a mano</title>
 <meta name="description" content="Tienda online de mates artesanales, yerbas, termos y materas. Envíos a todo el país. Sitio de demostración realizado por Bether Studio.">
-<meta property="og:title" content="Yerba & Barro — El ritual de todos los días">
-<meta property="og:description" content="Mates, yerbas y materas hechos a mano. Envíos a todo el país.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1765533088244-37cd08b9524d?w=1200&q=70&auto=format&fit=crop">
+<meta property="og:title" content="Yerba & Barro — Mates, yerbas y materas hechos a mano">
+<meta property="og:description" content="Tienda online de mates artesanales, yerbas, termos y materas. Envíos a todo el país. Sitio de demostración realizado por Bether Studio.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1765533088244-37cd08b9524d?w=1200&q=72&auto=format&fit=crop">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/estilos.css?v=2">
 <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-
 <div class="announce" aria-label="Promociones">
   <div class="announce__track">
     <span>🚚 Envío gratis desde $60.000</span><span>💳 3 cuotas sin interés</span><span>🏦 10% off pagando por transferencia</span><span>🧉 Curado incluido en todos los mates</span>
@@ -25,18 +24,21 @@
 
 <header class="head" id="head">
   <div class="wrap">
-    <a href="#" class="logo" aria-label="Yerba & Barro, inicio">
+    <a href="index.html" class="logo" aria-label="Yerba & Barro, inicio">
       <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 15h18c0 9-3 17-9 17s-9-8-9-17Z" fill="#c4623a"/><path d="M10 15h20" stroke="#1f3a2e" stroke-width="2.4" stroke-linecap="round"/><path d="M24 15 30 4" stroke="#1f3a2e" stroke-width="2.4" stroke-linecap="round"/><path d="M14 18c2 1 10 1 12 0" stroke="#7a9a4a" stroke-width="2.4" stroke-linecap="round"/></svg>
       <span>Yerba <i>&amp;</i> Barro</span>
     </a>
     <nav class="nav" id="nav">
-      <a href="#tienda" data-go="mates">Mates</a>
-      <a href="#tienda" data-go="yerbas">Yerbas</a>
-      <a href="#tienda" data-go="termos">Termos</a>
-      <a href="#tienda" data-go="materas">Materas</a>
-      <a href="#nosotros">Nosotros</a>
+      <a href="index.html" class="on" aria-current="page">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="tienda.html?cat=mates">Mates</a>
+      <a href="tienda.html?cat=yerbas">Yerbas</a>
+      <a href="nosotros.html">Nosotros</a>
     </nav>
     <div class="head__right">
+      <button class="icon-btn" id="searchBtn" aria-label="Buscar productos" title="Buscar (tecla /)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
       <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
         <span class="cart-btn__n" id="cartCount">0</span>
@@ -46,6 +48,7 @@
   </div>
 </header>
 
+<main>
 <section class="hero">
   <div class="wrap hero__grid">
     <div class="hero__copy">
@@ -53,8 +56,8 @@
       <h1>El ritual de todos los días, <em>hecho a mano.</em></h1>
       <p>Mates de calabaza, cerámica y madera curados uno por uno, yerbas elegidas y todo lo que necesitás para matear donde sea.</p>
       <div class="hero__ctas">
-        <a href="#tienda" class="btn btn--green">Comprar ahora</a>
-        <a href="#tienda" class="btn btn--line" data-go="mates">Ver mates</a>
+        <a href="tienda.html" class="btn btn--green">Ver la tienda</a>
+        <a href="tienda.html?cat=mates" class="btn btn--line">Ver mates</a>
       </div>
       <div class="hero__rating"><span class="stars">★★★★★</span><b>4,9</b> · más de 1.200 mateadores felices</div>
     </div>
@@ -75,42 +78,52 @@
   </div>
 </section>
 
-<section class="sec" id="categorias">
+<section class="sec">
   <div class="wrap">
     <div class="sec__head rv"><h2>Elegí por <em>categoría</em></h2></div>
     <div class="cats" id="cats"></div>
   </div>
 </section>
 
-<section class="sec sec--shop" id="tienda">
+<section class="sec sec--shop">
   <div class="wrap">
     <div class="sec__head sec__head--row rv">
-      <h2>La <em>tienda</em></h2>
-      <div class="tools">
-        <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar…" aria-label="Buscar productos"></label>
-        <select id="sort" aria-label="Ordenar">
-          <option value="dest">Destacados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option>
-        </select>
-      </div>
+      <h2>Los <em>más vendidos</em></h2>
+      <div class="rail__btns"><button id="railPrev" aria-label="Anteriores">←</button><button id="railNext" aria-label="Siguientes">→</button></div>
     </div>
-    <div class="chips" id="chips"></div>
-    <div class="grid" id="grid"></div>
-    <p class="empty" id="empty" hidden>No encontramos productos con esa búsqueda. 🧉</p>
+    <div class="rail"><div class="rail__track" id="rail"></div></div>
+    <p style="text-align:center;margin-top:20px"><a href="tienda.html" class="btn btn--line">Ver toda la tienda</a></p>
   </div>
 </section>
 
-<section class="story" id="nosotros">
-  <img src="https://images.unsplash.com/photo-1681330816217-d0ff041b236b?w=1600&q=70&auto=format&fit=crop" alt="Persona tomando mate junto a un lago" loading="lazy">
+<section class="sec" style="padding-top:70px">
+  <div class="wrap">
+    <div class="kit rv">
+      <div class="kit__img"><img src="https://images.unsplash.com/photo-1691480150204-66dd1eb77391?w=1100&q=72&auto=format&fit=crop" alt="Matera de cuero" loading="lazy"></div>
+      <div class="kit__txt">
+        <span class="pill pill--light">🎁 Ideal para regalar</span>
+        <h2>Armá tu kit <em>matero.</em></h2>
+        <p>Elegí mate, termo, yerba y matera, y grabalos con sus iniciales. Llega envuelto para regalo.</p>
+        <div class="kit__list"><span>Mate</span><span>Termo</span><span>Yerba</span><span>Matera</span><span>Grabado</span></div>
+        <a href="tienda.html?cat=materas" class="btn">Empezar por la matera</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <img src="https://images.unsplash.com/photo-1681330816217-d0ff041b236b?w=1600&q=72&auto=format&fit=crop" alt="Persona tomando mate junto a un lago" loading="lazy">
   <div class="wrap">
     <div class="story__box rv">
       <span class="pill pill--light">Nosotros</span>
       <h2>Cada mate pasa por <em>nuestras manos.</em></h2>
-      <p>Somos un taller familiar. Elegimos las calabazas una por una, las curamos y las forramos a mano. Si un mate no nos convence para nosotros, no te lo mandamos a vos.</p>
+      <p>Somos un taller familiar. Elegimos las calabazas una por una, las curamos y las forramos a mano.</p>
+      <a href="nosotros.html" class="btn btn--line" style="border-color:#fff;color:#fff;margin-top:22px">Conocé el taller</a>
     </div>
   </div>
 </section>
 
-<section class="sec" id="opiniones">
+<section class="sec">
   <div class="wrap">
     <div class="sec__head rv"><h2>Lo que dicen <em>los que matean</em></h2></div>
     <div class="reviews">
@@ -120,28 +133,30 @@
     </div>
   </div>
 </section>
+</main>
 
 <footer class="foot">
   <div class="wrap">
-    <a href="#" class="logo"><span>Yerba <i>&amp;</i> Barro</span></a>
-    <p>Taller en Lanús · Envíos a todo el país · Lun a sáb 10–19 h</p>
-    <p class="demo">Tienda de demostración: los productos, precios y opiniones son ficticios y el pedido se envía por WhatsApp a modo de ejemplo. Fotos: Unsplash. Diseño y desarrollo: <a href="https://bether-studio.com/" target="_blank" rel="noopener">Bether Studio</a>.</p>
+    <div class="foot__cols">
+      <div><a href="index.html" class="logo"><span>Yerba <i>&amp;</i> Barro</span></a><p style="margin-top:12px">Mates, yerbas y materas hechos a mano en nuestro taller de Lanús.</p></div>
+      <div><h4>Tienda</h4><ul><li><a href="tienda.html?cat=mates">Mates</a></li><li><a href="tienda.html?cat=yerbas">Yerbas</a></li><li><a href="tienda.html?cat=termos">Termos</a></li><li><a href="tienda.html?cat=materas">Materas</a></li></ul></div>
+      <div><h4>Ayuda</h4><ul><li><a href="nosotros.html#preguntas">Envíos y cambios</a></li><li><a href="nosotros.html#preguntas">Cómo curar tu mate</a></li><li><a href="checkout.html">Finalizar compra</a></li></ul></div>
+      <div><h4>Taller</h4><ul><li>Lanús, Buenos Aires</li><li>Lun a sáb · 10 a 19 h</li><li><a href="nosotros.html">Nosotros</a></li></ul></div>
+    </div>
+    <p class="demo">© <span data-year></span> · Tienda de demostración: los productos, precios y opiniones son ficticios y el pedido se envía por WhatsApp a modo de ejemplo. Fotos: Unsplash. Diseño y desarrollo: <a href="https://bether-studio.com/" target="_blank" rel="noopener">Bether Studio</a>.</p>
   </div>
 </footer>
 
-<!-- Vista rápida -->
-<dialog class="qv" id="qv">
-  <button class="x" data-close aria-label="Cerrar">✕</button>
-  <div id="qvBody"></div>
-</dialog>
+<div class="sbox" id="sbox" aria-hidden="true" role="dialog" aria-label="Buscar productos">
+  <div class="sbox__panel">
+    <div class="sbox__in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="sIn" type="search" placeholder="¿Qué estás buscando?" autocomplete="off" aria-label="Buscar"><kbd>Esc</kbd></div>
+    <div class="sbox__res" id="sRes"></div>
+  </div>
+</div>
 
-<!-- Carrito -->
 <div class="overlay" id="overlay"></div>
 <aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
-  <div class="drawer__head">
-    <h3 id="drawerTitle">Tu carrito</h3>
-    <button class="x" id="drawerX" aria-label="Cerrar carrito">✕</button>
-  </div>
+  <div class="drawer__head"><h3>Tu carrito</h3><button class="x" id="drawerX" aria-label="Cerrar carrito">✕</button></div>
   <div class="ship" id="ship"></div>
   <div class="drawer__body" id="drawerBody"></div>
   <div class="drawer__foot" id="drawerFoot"></div>
@@ -149,6 +164,7 @@
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="js/tienda.js"></script>
+<script src="js/datos.js?v=2"></script>
+<script src="js/tienda.js?v=2"></script>
 </body>
 </html>
