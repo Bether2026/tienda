@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yerba &amp; Barro — Mates, yerbas y materas hechos a mano</title>
+<meta name="description" content="Tienda online de mates artesanales, yerbas, termos y materas. Envíos a todo el país. Sitio de demostración realizado por Bether Studio.">
+<meta property="og:title" content="Yerba & Barro — El ritual de todos los días">
+<meta property="og:description" content="Mates, yerbas y materas hechos a mano. Envíos a todo el país.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1765533088244-37cd08b9524d?w=1200&q=70&auto=format&fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div class="announce" aria-label="Promociones">
+  <div class="announce__track">
+    <span>🚚 Envío gratis desde $60.000</span><span>💳 3 cuotas sin interés</span><span>🏦 10% off pagando por transferencia</span><span>🧉 Curado incluido en todos los mates</span>
+    <span>🚚 Envío gratis desde $60.000</span><span>💳 3 cuotas sin interés</span><span>🏦 10% off pagando por transferencia</span><span>🧉 Curado incluido en todos los mates</span>
+  </div>
+</div>
+
+<header class="head" id="head">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Yerba & Barro, inicio">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M11 15h18c0 9-3 17-9 17s-9-8-9-17Z" fill="#c4623a"/><path d="M10 15h20" stroke="#1f3a2e" stroke-width="2.4" stroke-linecap="round"/><path d="M24 15 30 4" stroke="#1f3a2e" stroke-width="2.4" stroke-linecap="round"/><path d="M14 18c2 1 10 1 12 0" stroke="#7a9a4a" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span>Yerba <i>&amp;</i> Barro</span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#tienda" data-go="mates">Mates</a>
+      <a href="#tienda" data-go="yerbas">Yerbas</a>
+      <a href="#tienda" data-go="termos">Termos</a>
+      <a href="#tienda" data-go="materas">Materas</a>
+      <a href="#nosotros">Nosotros</a>
+    </nav>
+    <div class="head__right">
+      <button class="cart-btn" id="cartBtn" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-btn__n" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <span class="pill">🌿 Nueva temporada · Mates imperiales</span>
+      <h1>El ritual de todos los días, <em>hecho a mano.</em></h1>
+      <p>Mates de calabaza, cerámica y madera curados uno por uno, yerbas elegidas y todo lo que necesitás para matear donde sea.</p>
+      <div class="hero__ctas">
+        <a href="#tienda" class="btn btn--green">Comprar ahora</a>
+        <a href="#tienda" class="btn btn--line" data-go="mates">Ver mates</a>
+      </div>
+      <div class="hero__rating"><span class="stars">★★★★★</span><b>4,9</b> · más de 1.200 mateadores felices</div>
+    </div>
+    <div class="hero__media">
+      <img src="https://images.unsplash.com/photo-1765533088244-37cd08b9524d?w=1100&q=72&auto=format&fit=crop" alt="Muchos mates con yerba y bombilla">
+      <div class="hero__card" id="heroCard"></div>
+      <div class="stamp"><svg viewBox="0 0 100 100"><defs><path id="c" d="M50 50m-38 0a38 38 0 1 1 76 0a38 38 0 1 1-76 0"/></defs><text><textPath href="#c">HECHO A MANO · EN ARGENTINA · HECHO A MANO · </textPath></text></svg><span>🧉</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="perks">
+  <div class="wrap">
+    <div><span>🚚</span><b>Envío gratis</b><small>desde $60.000 a todo el país</small></div>
+    <div><span>💳</span><b>3 cuotas sin interés</b><small>con todas las tarjetas</small></div>
+    <div><span>🏦</span><b>10% off</b><small>pagando por transferencia</small></div>
+    <div><span>🔁</span><b>Cambios fáciles</b><small>hasta 30 días después</small></div>
+  </div>
+</section>
+
+<section class="sec" id="categorias">
+  <div class="wrap">
+    <div class="sec__head rv"><h2>Elegí por <em>categoría</em></h2></div>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<section class="sec sec--shop" id="tienda">
+  <div class="wrap">
+    <div class="sec__head sec__head--row rv">
+      <h2>La <em>tienda</em></h2>
+      <div class="tools">
+        <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Buscar…" aria-label="Buscar productos"></label>
+        <select id="sort" aria-label="Ordenar">
+          <option value="dest">Destacados</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option>
+        </select>
+      </div>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>No encontramos productos con esa búsqueda. 🧉</p>
+  </div>
+</section>
+
+<section class="story" id="nosotros">
+  <img src="https://images.unsplash.com/photo-1681330816217-d0ff041b236b?w=1600&q=70&auto=format&fit=crop" alt="Persona tomando mate junto a un lago" loading="lazy">
+  <div class="wrap">
+    <div class="story__box rv">
+      <span class="pill pill--light">Nosotros</span>
+      <h2>Cada mate pasa por <em>nuestras manos.</em></h2>
+      <p>Somos un taller familiar. Elegimos las calabazas una por una, las curamos y las forramos a mano. Si un mate no nos convence para nosotros, no te lo mandamos a vos.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="opiniones">
+  <div class="wrap">
+    <div class="sec__head rv"><h2>Lo que dicen <em>los que matean</em></h2></div>
+    <div class="reviews">
+      <figure class="rv"><span class="stars">★★★★★</span><blockquote>"El imperial llegó curado y con una cartita escrita a mano. Ya es mi mate de todos los días."</blockquote><figcaption>Agustina · Córdoba</figcaption></figure>
+      <figure class="rv"><span class="stars">★★★★★</span><blockquote>"Pedí la matera para regalar y la pude grabar con las iniciales. Llegó en tres días a Mendoza."</blockquote><figcaption>Martín · Mendoza</figcaption></figure>
+      <figure class="rv"><span class="stars">★★★★★</span><blockquote>"La yerba barbacuá es otra cosa. Ya voy por el tercer paquete."</blockquote><figcaption>Lucía · Rosario</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <a href="#" class="logo"><span>Yerba <i>&amp;</i> Barro</span></a>
+    <p>Taller en Lanús · Envíos a todo el país · Lun a sáb 10–19 h</p>
+    <p class="demo">Tienda de demostración: los productos, precios y opiniones son ficticios y el pedido se envía por WhatsApp a modo de ejemplo. Fotos: Unsplash. Diseño y desarrollo: <a href="https://bether-studio.com/" target="_blank" rel="noopener">Bether Studio</a>.</p>
+  </div>
+</footer>
+
+<!-- Vista rápida -->
+<dialog class="qv" id="qv">
+  <button class="x" data-close aria-label="Cerrar">✕</button>
+  <div id="qvBody"></div>
+</dialog>
+
+<!-- Carrito -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Carrito" aria-hidden="true">
+  <div class="drawer__head">
+    <h3 id="drawerTitle">Tu carrito</h3>
+    <button class="x" id="drawerX" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="ship" id="ship"></div>
+  <div class="drawer__body" id="drawerBody"></div>
+  <div class="drawer__foot" id="drawerFoot"></div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/tienda.js"></script>
+</body>
+</html>
